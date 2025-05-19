@@ -14,9 +14,9 @@ Runtime = st.number_input("Enter Runtime value")
 
 if st.button("Predict Maintenance Need"):
     input_data = np.array([[Vibration, Temperature, Pressure, RPM, Runtime]])
-    if any(val < 0 for val in input_data):
+    if any(val < 0 for val in input_data.flatten()):
         st.error('Invalid input: Value cannot be nagative!')
-    elif all(val == 0 for val in input_data):
+    elif all(val == 0 for val in input_data.flatten()):
         st.error('Machine is off: Cannot predict maintenance need.')
     else:
         prediction = model.predict(input_data)
