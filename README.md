@@ -31,3 +31,5 @@ Streamlit was used to build a simple web interface that allows users to input da
 * Use more detailed and realistic Dataset
 * Integrate time-based features
 * Explore anomaly detection techniques
+
+Streamlit Application Link: https://predictivemaintenaceai.streamlit.app
